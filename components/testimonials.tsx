@@ -33,7 +33,7 @@ export default function Testimonials() {
             What Clients Say
           </p>
           <h2 className="mt-2 text-3xl font-bold text-charcoal sm:text-4xl">
-            5-Star Reviews
+            5-Star Reviews from DFW Homeowners
           </h2>
         </div>
 

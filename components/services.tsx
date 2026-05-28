@@ -1,56 +1,12 @@
-import {
-  Fence,
-  Cuboid as Deck,
-  Paintbrush,
-  Home,
-  TreePine,
-  Wrench,
-} from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-
-const services = [
-  {
-    icon: Fence,
-    title: "Fencing",
-    description:
-      "Custom wood, vinyl, and metal fences built to last. Privacy, security, and curb appeal for your property.",
-  },
-  {
-    icon: Deck,
-    title: "Decks",
-    description:
-      "Beautiful, durable decks and patios designed for outdoor living. From simple platforms to multi-level builds.",
-  },
-  {
-    icon: Paintbrush,
-    title: "Painting",
-    description:
-      "Interior and exterior painting with premium materials. Clean lines, lasting finishes, and attention to detail.",
-  },
-  {
-    icon: Home,
-    title: "Interior Renovation",
-    description:
-      "Kitchen and bath remodels, flooring, drywall, and full interior makeovers tailored to your vision.",
-  },
-  {
-    icon: TreePine,
-    title: "Landscaping",
-    description:
-      "Transform your yard with professional landscaping, hardscaping, drainage solutions, and garden design.",
-  },
-  {
-    icon: Wrench,
-    title: "Exterior Renovation & Repair",
-    description:
-      "Siding, trim, fascia, gutters, and structural repairs. We restore and protect your home's exterior.",
-  },
-];
+import { services } from "@/lib/data";
 
 export default function Services() {
   return (
@@ -61,30 +17,33 @@ export default function Services() {
             What We Do
           </p>
           <h2 className="mt-2 text-3xl font-bold text-charcoal sm:text-4xl">
-            Our Services
+            Contracting Services in Carrollton &amp; Dallas
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             From fences and decks to full renovations, we bring skilled
-            craftsmanship to every project in the Greater Dallas area.
+            craftsmanship to every project in Carrollton, Dallas, and the
+            Greater DFW area.
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card
-              key={service.title}
-              className="group border-warm-border transition-shadow hover:shadow-lg"
-            >
-              <CardHeader>
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-sand/10">
-                  <service.icon className="h-6 w-6 text-sand-dark" />
-                </div>
-                <CardTitle className="text-charcoal">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link key={service.slug} href={`/services/${service.slug}`}>
+              <Card className="group border-warm-border transition-shadow hover:shadow-lg h-full">
+                <CardHeader>
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-sand/10">
+                    <service.icon className="h-6 w-6 text-sand-dark" />
+                  </div>
+                  <CardTitle className="text-charcoal">{service.shortTitle}</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    {service.description}
+                  </CardDescription>
+                  <div className="mt-3 flex items-center gap-1 text-sm font-medium text-sand-dark opacity-0 transition-opacity group-hover:opacity-100">
+                    Learn more <ArrowRight className="h-3 w-3" />
+                  </div>
+                </CardHeader>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

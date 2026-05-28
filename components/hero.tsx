@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Phone, Play } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -17,8 +17,8 @@ export default function Hero() {
               Carrollton &amp; Greater Dallas, TX
             </p>
             <h1 className="text-3xl font-bold tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
-              Quality Craftsmanship{" "}
-              <span className="text-sand-dark">You Can Trust</span>
+              Fencing, Decks &amp; Renovation{" "}
+              <span className="text-sand-dark">Contractor in Carrollton &amp; Dallas, TX</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Rust Nail Contracting delivers expert fencing, decks, painting,
@@ -27,13 +27,16 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <a href="#contact">
-                  Get Your Free Estimate
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <a href="tel:4693465900">
+                  <Phone className="mr-2 h-4 w-4" />
+                  (469) 346-5900
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="#services">View Our Services</a>
+                <a href="#contact">
+                  Get Free Estimate
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>

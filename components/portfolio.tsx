@@ -18,7 +18,7 @@ export default function Portfolio() {
             See Our Work
           </p>
           <h2 className="mt-2 text-3xl font-bold text-charcoal sm:text-4xl">
-            Recent Projects
+            Recent Projects in the DFW Area
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             Browse some of our recent projects across the Greater Dallas area.

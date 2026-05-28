@@ -38,8 +38,8 @@ export default function About() {
               Why Choose Us
             </p>
             <h2 className="mt-2 text-3xl font-bold text-charcoal sm:text-4xl">
-              Built on Integrity,{" "}
-              <span className="text-sand-dark">Finished with Pride</span>
+              Why Choose Rusty Nail Contracting{" "}
+              <span className="text-sand-dark">in Carrollton &amp; Dallas</span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               At Rust Nail Contracting, we believe every home deserves expert
